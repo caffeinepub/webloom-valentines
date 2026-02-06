@@ -1,0 +1,236 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build “Webloom Valentines”: a fully responsive, premium luxury cinematic Valentine’s storytelling website (Medium Plan) with pastel Valentine palette, high-end UI/UX, smooth scrolling, rich GSAP animations, custom cursor + micro-interactions, romantic media/motion layers, and 3–4 pages with a beautiful navbar—now enhanced with immersive interactive memory/game sections (e.g., Love Puzzle, Q&A game, Travel Memories, Voice Notes, Flipbook Love Story, Monthly Memories, Polaroid Love Wall) seamlessly blended into the story flow.",
+  "architectural_notes": [
+    "Tech stack: HTML/CSS/JavaScript with GSAP for animations and Lenis or Locomotive-style smooth scrolling.",
+    "Performance requirement: GPU-accelerated, highly optimized animations; avoid jerky motion and lag.",
+    "UX requirement: mobile-first, touch-optimized interactions with premium micro-interactions and custom cursor system."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-3-4-page-react-site-named-webloom-valentines-with-a-beautiful-premium-navbar-and-an-emotional-story-based-navigation-structure-use-english-for-all-user-facing-text-pages-must-be-fully-responsive-and-mobile-first",
+      "title": "Create a 3–4 page React site named “Webloom Valentines” with a beautiful, premium navbar and an emotional, story-based navigation structure. Use English for all user-facing text. Pages must be fully responsive and mobile-first.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-cohesive-valentine-luxury-visual-system-across-the-entire-site-using-the-specified-palette-blush-pink-soft-rose-pastel-red-champagne-gold-cream-white-light-lavender-highlights-with-soft-gradients-glassmorphism-cards-subtle-glow-elegant-shadows-and-soft-blur-overlays-ensure-a-romantic-dreamy-premium-cinematic-look-not-kitschy",
+      "title": "Implement a cohesive Valentine luxury visual system across the entire site using the specified palette (Blush Pink, Soft Rose, Pastel Red, Champagne Gold, Cream White, Light Lavender highlights) with soft gradients, glassmorphism cards, subtle glow, elegant shadows, and soft blur overlays. Ensure a romantic, dreamy, premium cinematic look (not kitschy).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-fully-custom-animated-valentine-themed-cursor-system-for-desktop-inner-glowing-dot-outer-soft-trailing-ring-with-delayed-follow-hover-enlargement-cursor-morph-on-buttons-images-magnetic-attraction-effect-on-interactive-cards-buttons-and-a-heart-ripple-animation-on-click",
+      "title": "Build a fully custom animated Valentine-themed cursor system for desktop: inner glowing dot, outer soft trailing ring with delayed follow, hover enlargement, cursor morph on buttons/images, magnetic attraction effect on interactive cards/buttons, and a heart ripple animation on click.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-ultra-smooth-scrolling-with-natural-inertia-and-soft-easing-lenis-locomotive-style-across-the-site-ensuring-zero-jerky-motion-and-strong-performance-on-mobile-and-desktop",
+      "title": "Implement ultra-smooth scrolling with natural inertia and soft easing (Lenis/Locomotive-style) across the site, ensuring zero jerky motion and strong performance on mobile and desktop.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-cinematic-motion-system-using-gsap-style-animation-patterns-across-pages-scroll-triggered-reveal-animations-fade-slide-scale-soft-zoom-transitions-elegant-easing-timeline-based-section-transitions-and-parallax-background-layers-where-appropriate",
+      "title": "Create a cinematic motion system using GSAP-style animation patterns across pages: scroll-triggered reveal animations (fade/slide/scale), soft zoom transitions, elegant easing, timeline-based section transitions, and parallax background layers where appropriate.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-8-10-section-romantic-storytelling-journey-distributed-across-the-3-4-pages-selecting-from-valentine-hero-about-our-love-story-how-we-met-first-date-memory-special-moments-cards-polaroid-photo-gallery-favorite-song-soft-background-music-love-letter-with-handwritten-animation-countdown-to-valentine-final-valentine-note-ensure-each-selected-section-has-premium-animations-and-smooth-transitions",
+      "title": "Implement an 8–10 section romantic storytelling journey distributed across the 3–4 pages, selecting from: Valentine Hero, About/Our Love Story, How We Met, First Date Memory, Special Moments Cards, Polaroid Photo Gallery, Favorite Song + soft background music, Love Letter with handwritten animation, Countdown to Valentine, Final Valentine Note. Ensure each selected section has premium animations and smooth transitions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-premium-hero-section-with-an-emotional-headline-soft-motion-dreamy-glow-accents-and-a-glowing-primary-cta-that-smoothly-navigates-into-the-story-scroll-to-next-section-or-route",
+      "title": "Create a premium Hero section with an emotional headline, soft motion, dreamy glow accents, and a glowing primary CTA that smoothly navigates into the story (scroll to next section or route).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-polaroid-style-photo-gallery-experience-using-floating-photo-frames-polaroid-cards-glassmorphic-containers-dreamy-glow-overlays-and-a-subtle-film-grain-texture-add-smooth-hover-interactions-and-scroll-animations-for-images",
+      "title": "Build a Polaroid-style photo gallery experience using floating photo frames, polaroid cards, glassmorphic containers, dreamy glow overlays, and a subtle film grain texture. Add smooth hover interactions and scroll animations for images.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-music-emotional-layers-system-soft-romantic-instrumental-background-music-with-an-elegant-player-ui-play-pause-volume-control-smooth-volume-fade-in-out-and-a-favorite-song-embed-section-that-matches-the-site-aesthetic",
+      "title": "Add a Music & Emotional Layers system: soft romantic instrumental background music with an elegant player UI (play/pause, volume control), smooth volume fade in/out, and a Favorite Song embed section that matches the site aesthetic.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-love-letter-section-with-an-animated-handwritten-style-reveal-e-g-stroke-typing-illusion-matching-the-luxury-romantic-tone-and-synchronized-with-scroll-or-timeline-based-animation",
+      "title": "Implement a Love Letter section with an animated handwritten-style reveal (e.g., stroke/typing illusion), matching the luxury romantic tone and synchronized with scroll or timeline-based animation.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-countdown-to-valentine-section-with-a-premium-display-days-hours-minutes-seconds-and-subtle-cinematic-motion-accents-ensure-it-is-time-zone-robust-on-the-client-and-responsive",
+      "title": "Implement a Countdown to Valentine section with a premium display (days/hours/minutes/seconds) and subtle cinematic motion accents; ensure it is time-zone robust on the client and responsive.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-overall-ux-quality-mobile-first-responsiveness-touch-optimized-interactions-reduced-motion-accessibility-support-and-performance-safeguards-avoid-heavy-layout-thrash-prefer-transform-opacity",
+      "title": "Ensure overall UX quality: mobile-first responsiveness, touch-optimized interactions, reduced-motion accessibility support, and performance safeguards (avoid heavy layout thrash; prefer transform/opacity).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-set-of-premium-interactive-storytelling-sections-love-puzzle-question-answer-game-travel-memories-voice-note-messages-flipbook-love-story-monthly-memories-and-polaroid-love-wall-implemented-as-reusable-react-components-that-match-the-existing-valentine-luxury-visual-system-glassmorphism-soft-pastel-gradients-subtle-glow-film-grain-and-animation-patterns-reveal-sectiontimeline-parallaxlayer-with-all-user-facing-text-in-english",
+      "title": "Create a new set of premium interactive storytelling sections—Love Puzzle, Question–Answer Game, Travel Memories, Voice Note Messages, Flipbook Love Story, Monthly Memories, and Polaroid Love Wall—implemented as reusable React components that match the existing Valentine luxury visual system (glassmorphism, soft pastel gradients, subtle glow, film grain) and animation patterns (Reveal/SectionTimeline/ParallaxLayer), with all user-facing text in English.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-love-puzzle-section-as-an-interactive-playful-yet-elegant-mini-experience-where-users-can-complete-a-simple-puzzle-interaction-e-g-rearranging-tiles-cards-that-reveals-a-romantic-message-upon-completion-including-a-clear-reset-replay-control",
+      "title": "Implement the Love Puzzle section as an interactive, playful-yet-elegant mini experience where users can complete a simple puzzle interaction (e.g., rearranging tiles/cards) that reveals a romantic message upon completion, including a clear reset/replay control.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-question-answer-game-section-as-an-interactive-q-a-flow-with-multiple-romantic-prompts-where-selecting-an-answer-triggers-an-emotionally-styled-response-transition-and-optionally-unlocks-the-next-prompt-with-a-gentle-progression-indicator-and-replayability",
+      "title": "Implement the Question–Answer Game section as an interactive Q&A flow with multiple romantic prompts, where selecting an answer triggers an emotionally styled response/transition and optionally unlocks the next prompt, with a gentle progression indicator and replayability.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-travel-memories-section-as-an-interactive-memory-map-timeline-style-gallery-no-geolocation-that-lets-users-browse-travel-moments-via-a-premium-timeline-carousel-of-destinations-each-expanding-into-a-detailed-memory-card-with-cinematic-transitions-and-optional-image-placeholders",
+      "title": "Implement the Travel Memories section as an interactive memory map/timeline-style gallery (no geolocation) that lets users browse travel moments via a premium timeline/carousel of destinations, each expanding into a detailed memory card with cinematic transitions and optional image placeholders.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-voice-note-messages-section-as-a-curated-set-of-playable-voice-notes-predefined-audio-sources-with-an-elegant-mini-player-ui-per-note-play-pause-progress-duration-smooth-fade-volume-behavior-aligned-with-the-existing-music-system-and-premium-animated-reveal-when-a-note-is-opened",
+      "title": "Implement the Voice Note Messages section as a curated set of playable voice notes (predefined audio sources) with an elegant mini-player UI per note (play/pause, progress, duration), smooth fade/volume behavior aligned with the existing music system, and premium animated reveal when a note is opened.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-flipbook-love-story-section-as-an-interactive-flipbook-style-sequence-of-story-pages-where-users-can-flip-forward-back-through-short-scenes-using-cinematic-page-turn-animations-that-degrade-gracefully-under-reduced-motion-settings",
+      "title": "Implement the Flipbook Love Story section as an interactive flipbook-style sequence of story “pages” where users can flip forward/back through short scenes, using cinematic page-turn animations that degrade gracefully under reduced-motion settings.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-monthly-memories-section-as-an-interactive-month-by-month-memory-selector-e-g-grid-of-months-or-a-horizontal-selector-that-reveals-a-highlight-memory-card-per-month-with-smooth-transitions-premium-micro-interactions-and-an-option-to-browse-all-months-sequentially",
+      "title": "Implement the Monthly Memories section as an interactive month-by-month memory selector (e.g., grid of months or a horizontal selector) that reveals a highlight memory card per month with smooth transitions, premium micro-interactions, and an option to browse all months sequentially.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-polaroid-love-wall-section-as-an-interactive-wall-of-polaroid-style-cards-building-on-the-existing-polaroidgallery-visual-style-where-users-can-tap-click-a-polaroid-to-expand-it-into-a-focused-memory-view-with-cinematic-transitions-and-a-clear-way-to-close-return-to-the-wall",
+      "title": "Implement the Polaroid Love Wall section as an interactive “wall” of polaroid-style cards (building on the existing PolaroidGallery visual style) where users can tap/click a polaroid to expand it into a focused memory view with cinematic transitions and a clear way to close/return to the wall.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-new-interactive-sections-into-the-existing-3-4-page-storytelling-flow-home-our-story-gallery-forever-so-that-they-feel-seamless-and-intentional-using-existing-section-patterns-sectionheader-glasscard-reveal-sectiontimeline-and-maintaining-coherent-narrative-pacing",
+      "title": "Integrate the new interactive sections into the existing 3–4 page storytelling flow (Home, Our Story, Gallery, Forever) so that they feel seamless and intentional, using existing section patterns (SectionHeader, GlassCard, Reveal, SectionTimeline) and maintaining coherent narrative pacing.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create 3–4 page luxury cinematic Valentine website with beautiful navbar and emotional storytelling flow (8–10 sections total)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement Valentine pastel luxury visual system (soft gradients, glassmorphism cards, subtle glow, elegant shadows, soft blur overlays, film grain texture)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Build fully custom animated Valentine cursor (inner glow dot, trailing ring, delayed follow, hover enlarge/morph, magnetic buttons/cards, heart ripple on click)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add ultra-smooth scrolling system (Lenis/Locomotive-style inertia + easing) with scroll-triggered reveals, parallax backgrounds, cinematic section transitions, timeline-based flow",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create premium animated section set (hero, love story, how we met, first date, special moments cards, polaroid gallery, favorite song + background music, love letter handwriting animation, countdown, final note)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add music layer: soft instrumental background music, favorite song embed section, elegant music player UI, smooth volume fade in/out",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Ensure mobile-first, touch-optimized, perfectly responsive performance with GPU-accelerated animations and zero-lag interactions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Integrate premium interactive/emotional sections (Love Puzzle, Q&A game, Travel Memories, Voice Note Messages, Flipbook Love Story, Monthly Memories, Polaroid Love Wall) with playful-elegant interactions, smooth animations, soft pastel visuals, and cinematic transitions integrated into the storytelling flow",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Webloom Valentines",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

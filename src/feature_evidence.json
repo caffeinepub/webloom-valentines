@@ -1,0 +1,183 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-new-set-of-premium-interactive-storytelling-sections-love-puzzle-question-answer-game-travel-memories-voice-note-messages-flipbook-love-story-monthly-memories-and-polaroid-love-wall-implemented-as-reusable-react-components-that-match-the-existing-valentine-luxury-visual-system-glassmorphism-soft-pastel-gradients-subtle-glow-film-grain-and-animation-patterns-reveal-sectiontimeline-parallaxlayer-with-all-user-facing-text-in-english",
+      "featureTitle": "Create a new set of premium interactive storytelling sections—Love Puzzle, Question–Answer Game, Travel Memories, Voice Note Messages, Flipbook Love Story, Monthly Memories, and Polaroid Love Wall—implemented as reusable React components that match the existing Valentine luxury visual system (glassmorphism, soft pastel gradients, subtle glow, film grain) and animation patterns (Reveal/SectionTimeline/ParallaxLayer), with all user-facing text in English.",
+      "files": [
+        "frontend/src/components/sections/FlipbookLoveStorySection.tsx",
+        "frontend/src/components/sections/LovePuzzleSection.tsx",
+        "frontend/src/components/sections/MonthlyMemoriesSection.tsx",
+        "frontend/src/components/sections/PolaroidLoveWallSection.tsx",
+        "frontend/src/components/sections/QuestionAnswerGameSection.tsx",
+        "frontend/src/components/sections/TravelMemoriesSection.tsx",
+        "frontend/src/components/sections/VoiceNoteMessagesSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-love-puzzle-section-as-an-interactive-playful-yet-elegant-mini-experience-where-users-can-complete-a-simple-puzzle-interaction-e-g-rearranging-tiles-cards-that-reveals-a-romantic-message-upon-completion-including-a-clear-reset-replay-control",
+      "featureTitle": "Implement the Love Puzzle section as an interactive, playful-yet-elegant mini experience where users can complete a simple puzzle interaction (e.g., rearranging tiles/cards) that reveals a romantic message upon completion, including a clear reset/replay control.",
+      "files": [
+        "frontend/src/components/sections/LovePuzzleSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-question-answer-game-section-as-an-interactive-q-a-flow-with-multiple-romantic-prompts-where-selecting-an-answer-triggers-an-emotionally-styled-response-transition-and-optionally-unlocks-the-next-prompt-with-a-gentle-progression-indicator-and-replayability",
+      "featureTitle": "Implement the Question–Answer Game section as an interactive Q&A flow with multiple romantic prompts, where selecting an answer triggers an emotionally styled response/transition and optionally unlocks the next prompt, with a gentle progression indicator and replayability.",
+      "files": [
+        "frontend/src/components/sections/QuestionAnswerGameSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-travel-memories-section-as-an-interactive-memory-map-timeline-style-gallery-no-geolocation-that-lets-users-browse-travel-moments-via-a-premium-timeline-carousel-of-destinations-each-expanding-into-a-detailed-memory-card-with-cinematic-transitions-and-optional-image-placeholders",
+      "featureTitle": "Implement the Travel Memories section as an interactive memory map/timeline-style gallery (no geolocation) that lets users browse travel moments via a premium timeline/carousel of destinations, each expanding into a detailed memory card with cinematic transitions and optional image placeholders.",
+      "files": [
+        "frontend/src/components/sections/TravelMemoriesSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-voice-note-messages-section-as-a-curated-set-of-playable-voice-notes-predefined-audio-sources-with-an-elegant-mini-player-ui-per-note-play-pause-progress-duration-smooth-fade-volume-behavior-aligned-with-the-existing-music-system-and-premium-animated-reveal-when-a-note-is-opened",
+      "featureTitle": "Implement the Voice Note Messages section as a curated set of playable voice notes (predefined audio sources) with an elegant mini-player UI per note (play/pause, progress, duration), smooth fade/volume behavior aligned with the existing music system, and premium animated reveal when a note is opened.",
+      "files": [
+        "frontend/src/components/sections/VoiceNoteMessagesSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-flipbook-love-story-section-as-an-interactive-flipbook-style-sequence-of-story-pages-where-users-can-flip-forward-back-through-short-scenes-using-cinematic-page-turn-animations-that-degrade-gracefully-under-reduced-motion-settings",
+      "featureTitle": "Implement the Flipbook Love Story section as an interactive flipbook-style sequence of story “pages” where users can flip forward/back through short scenes, using cinematic page-turn animations that degrade gracefully under reduced-motion settings.",
+      "files": [
+        "frontend/src/components/sections/FlipbookLoveStorySection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-monthly-memories-section-as-an-interactive-month-by-month-memory-selector-e-g-grid-of-months-or-a-horizontal-selector-that-reveals-a-highlight-memory-card-per-month-with-smooth-transitions-premium-micro-interactions-and-an-option-to-browse-all-months-sequentially",
+      "featureTitle": "Implement the Monthly Memories section as an interactive month-by-month memory selector (e.g., grid of months or a horizontal selector) that reveals a highlight memory card per month with smooth transitions, premium micro-interactions, and an option to browse all months sequentially.",
+      "files": [
+        "frontend/src/components/sections/MonthlyMemoriesSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-polaroid-love-wall-section-as-an-interactive-wall-of-polaroid-style-cards-building-on-the-existing-polaroidgallery-visual-style-where-users-can-tap-click-a-polaroid-to-expand-it-into-a-focused-memory-view-with-cinematic-transitions-and-a-clear-way-to-close-return-to-the-wall",
+      "featureTitle": "Implement the Polaroid Love Wall section as an interactive “wall” of polaroid-style cards (building on the existing PolaroidGallery visual style) where users can tap/click a polaroid to expand it into a focused memory view with cinematic transitions and a clear way to close/return to the wall.",
+      "files": [
+        "frontend/src/components/sections/PolaroidLoveWallSection.tsx",
+        "frontend/src/content/premiumInteractiveSections.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-the-new-interactive-sections-into-the-existing-3-4-page-storytelling-flow-home-our-story-gallery-forever-so-that-they-feel-seamless-and-intentional-using-existing-section-patterns-sectionheader-glasscard-reveal-sectiontimeline-and-maintaining-coherent-narrative-pacing",
+      "featureTitle": "Integrate the new interactive sections into the existing 3–4 page storytelling flow (Home, Our Story, Gallery, Forever) so that they feel seamless and intentional, using existing section patterns (SectionHeader, GlassCard, Reveal, SectionTimeline) and maintaining coherent narrative pacing.",
+      "files": [
+        "frontend/src/pages/GalleryMusicPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/StoryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Premium interactive love-story sections (puzzle, Q&A, travel, voice notes, flipbook, monthly memories, polaroid wall)",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Add seven premium interactive storytelling sections as reusable components aligned with the existing Valentine luxury design and motion primitives, with all English copy.",
+      "acceptanceCriteria": [
+        "Each named section exists as a dedicated, reusable component under the existing frontend component organization (e.g., frontend/src/components/sections/...).",
+        "Each section uses the existing design language (GlassCard/SectionHeader styling conventions, soft pastel gradients, premium shadows) and does not introduce a clashing visual theme.",
+        "Each section includes smooth, cinematic transitions consistent with existing motion primitives (e.g., Reveal, SectionTimeline, ParallaxLayer) and avoids heavy layout thrash (prefer transform/opacity).",
+        "All user-facing labels, prompts, and helper text in these sections are in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "create",
+          "description": "Add static, English-only curated content for Love Puzzle, Q&A prompts, Travel Memories, Voice Notes metadata, Flipbook pages, Monthly Memories, and Polaroid Love Wall items (no persistence; purely frontend data)."
+        },
+        {
+          "path": "frontend/src/components/sections/LovePuzzleSection.tsx",
+          "operation": "create",
+          "description": "Create the Love Puzzle section component using existing GlassCard + SectionHeader styling and Reveal for cinematic transitions; ensure interactions/animations use transform/opacity and honor reduced-motion preferences."
+        },
+        {
+          "path": "frontend/src/components/sections/QuestionAnswerGameSection.tsx",
+          "operation": "create",
+          "description": "Create the Question–Answer Game section component with premium card UI (GlassCard) and Reveal-based transitions; keep all labels/prompts in English and ensure keyboard accessibility."
+        },
+        {
+          "path": "frontend/src/components/sections/TravelMemoriesSection.tsx",
+          "operation": "create",
+          "description": "Create the Travel Memories timeline/carousel section component with glassmorphic detail cards and cinematic transitions via Reveal/SectionTimeline; no maps/geolocation."
+        },
+        {
+          "path": "frontend/src/components/sections/VoiceNoteMessagesSection.tsx",
+          "operation": "create",
+          "description": "Create the Voice Note Messages section component with a per-note elegant mini-player UI and premium reveal when opened; align volume/fade behavior with the existing BackgroundMusicProvider patterns and honor reduced-motion."
+        },
+        {
+          "path": "frontend/src/components/sections/FlipbookLoveStorySection.tsx",
+          "operation": "create",
+          "description": "Create the Flipbook Love Story section component with forward/back controls and cinematic page-turn transitions that degrade to simple fades/slides under reduced motion."
+        },
+        {
+          "path": "frontend/src/components/sections/MonthlyMemoriesSection.tsx",
+          "operation": "create",
+          "description": "Create the Monthly Memories selector section component (grid/selector + next/prev) with premium micro-interactions and Reveal transitions, mobile-first spacing, and reduced-motion support."
+        },
+        {
+          "path": "frontend/src/components/sections/PolaroidLoveWallSection.tsx",
+          "operation": "create",
+          "description": "Create the Polaroid Love Wall section component building on the existing PolaroidGallery aesthetic (tilt/hover, playful layout) and adding an accessible expanded view with cinematic transitions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Implement Love Puzzle as a touch-friendly tile/card rearrangement mini experience that reveals a romantic message when completed and supports reset/replay.",
+      "acceptanceCriteria": [
+        "The puzzle interaction is usable on both desktop and mobile (touch-friendly).",
+        "On completion, the section reveals a premium-styled romantic message with a cinematic reveal animation.",
+        "There is an obvious way to reset/replay the puzzle without refreshing the page.",
+        "The section respects reduced-motion preferences (no continuous/complex animations when reduced motion is enabled)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/LovePuzzleSection.tsx",
+          "operation": "modify",
+          "description": "Implement the interactive puzzle mechanics (pointer/touch-friendly drag or tap-to-swap), completion detection, premium Reveal animation for the completion message, and a clear reset/replay control; ensure reduced-motion disables complex transitions and uses simple state changes."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add minimal utility classes for puzzle interaction affordances (e.g., touch-action behavior, focus ring consistency) while preserving the existing Valentine luxury visual system and honoring reduced-motion via existing motion-safe patterns."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Implement the Question–Answer Game as a multi-prompt romantic Q&A flow with animated feedback, progression indicator, and restart, including keyboard accessibility.",
+      "acceptanceCriteria": [
+        "The Q&A section presents multiple questions with selectable answers in a premium card UI.",
+        "Choosing an answer produces an immediate animated feedback state (e.g., soft glow, reveal of a response, or gentle transition).",
+        "Users can move through the questions and restart the experience.",
+        "The interaction is keyboard accessible for primary controls (focus states visible; Enter/Space activates choices)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/QuestionAnswerGameSection.tsx",
+          "operation": "modify",
+          "description": "Implement the Q&A flow state machine (current prompt, selected answer, animated response, next/restart controls) with premium GlassCard UI; ensure choice controls are buttons with visible focus styles and Enter/Space activation, and use Reveal/transform-based transitions."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Populate multiple English romantic prompts, answer choices, and emotionally styled responses used by the Q&A section; keep copy curated and consistent with the site tone."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Implement Travel Memories as a responsive timeline/carousel-style destination browser that expands into premium detail cards with cinematic transitions and optional image placeholders (no geolocation).",
+      "acceptanceCriteria": [
+        "Travel memories are presented as a browsable set of items (timeline, carousel, or stepped cards) with smooth transitions between items.",
+        "Selecting a travel memory expands/reveals details (title, short narrative) in a premium glassmorphic card presentation.",
+        "No GPS, maps, or external geolocation services are used.",
+        "The section remains responsive and touch-optimized (swipe or tap supported if a carousel/stepper is used)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/TravelMemoriesSection.tsx",
+          "operation": "modify",
+          "description": "Implement a timeline/carousel/stepper UI (no maps) with touch-friendly navigation, smooth transform/opacity transitions, and an expanded GlassCard detail view (title + short narrative + optional placeholder)."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Add English travel memory items (destination label, short narrative, optional placeholder metadata) consumed by the Travel Memories section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Implement Voice Note Messages as curated, predefined audio notes with an elegant mini-player per note (play/pause, progress, duration) and premium reveal, aligned with existing music fade/volume behavior.",
+      "acceptanceCriteria": [
+        "The section displays multiple voice-note items (title + short caption) and supports playing audio for a selected note.",
+        "Each voice note has a clear play/pause control and a visible progress indicator.",
+        "Audio playback is stable and does not require recording, uploading, or backend storage.",
+        "The section respects reduced-motion preferences and remains usable on mobile (large tap targets)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/audio/voice-note-01.mp3",
+          "operation": "create",
+          "description": "Add a curated, predefined audio asset for voice note playback (local static asset; no upload/recording)."
+        },
+        {
+          "path": "frontend/public/assets/audio/voice-note-02.mp3",
+          "operation": "create",
+          "description": "Add a curated, predefined audio asset for voice note playback (local static asset; no upload/recording)."
+        },
+        {
+          "path": "frontend/public/assets/audio/voice-note-03.mp3",
+          "operation": "create",
+          "description": "Add a curated, predefined audio asset for voice note playback (local static asset; no upload/recording)."
+        },
+        {
+          "path": "frontend/src/components/sections/VoiceNoteMessagesSection.tsx",
+          "operation": "modify",
+          "description": "Implement per-note mini-player UI (play/pause, progress bar, current time/duration), stable playback management (single active note, cleanup on unmount), premium Reveal when opening a note, and volume/fade behavior consistent with the site's BackgroundMusicProvider interaction patterns; honor reduced motion and ensure mobile tap targets."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Define the voice note list (English title/caption + local audio file references under frontend/public/assets/audio/) used by Voice Note Messages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Implement Flipbook Love Story as a responsive, touch-friendly page sequence with forward/back navigation and cinematic page-turn transitions that degrade under reduced motion.",
+      "acceptanceCriteria": [
+        "Users can navigate forward/back through multiple flipbook pages with obvious controls.",
+        "Page transitions feel premium and cinematic; when reduced motion is enabled, transitions become simple fades/slides without jarring effects.",
+        "Each page includes English story text and consistent typography/styling with the rest of the site.",
+        "The flipbook is responsive and works on touch devices (tap zones/buttons)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/FlipbookLoveStorySection.tsx",
+          "operation": "modify",
+          "description": "Implement flipbook navigation (next/prev + optional tap zones), premium page-turn animation using transform/opacity, and reduced-motion fallback to simple fades/slides; keep typography consistent with existing pages and English-only story text."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Add English flipbook page content (short scenes) consumed by the Flipbook section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Implement Monthly Memories as a month selector (grid or horizontal) revealing a highlight card per month with smooth transitions, mobile-friendly spacing, and sequential navigation.",
+      "acceptanceCriteria": [
+        "A user can select a month and see a corresponding memory card (title + short text) with a reveal animation.",
+        "There is a clear way to move between months (direct selection and/or next/previous).",
+        "The UI remains readable and well-spaced on mobile screens (no cramped month grid).",
+        "Animations use transform/opacity where possible and honor reduced-motion preferences."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/MonthlyMemoriesSection.tsx",
+          "operation": "modify",
+          "description": "Implement month selection UI (mobile-first layout), highlight memory GlassCard reveal with transform/opacity transitions, and next/previous navigation; ensure reduced-motion simplifies transitions."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Add English month-by-month memory items (title + short text) used by the Monthly Memories section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Implement Polaroid Love Wall as an interactive polaroid card wall that expands a selected memory into a focused view with cinematic transitions and accessible close/return behavior.",
+      "acceptanceCriteria": [
+        "The wall shows multiple polaroid items with playful tilt/hover effects consistent with the existing polaroid aesthetic.",
+        "Selecting a polaroid opens an expanded view (modal or inline expansion) with smooth transitions and an accessible close mechanism.",
+        "The expanded view supports keyboard escape/close (if modal) and traps focus appropriately (if modal).",
+        "The section remains fast and responsive; hover-only affordances have tap alternatives on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/PolaroidLoveWallSection.tsx",
+          "operation": "modify",
+          "description": "Implement a polaroid wall UI consistent with PolaroidGallery (tilt/hover + tap alternatives), and add an expanded focused view (modal-style) with transform/opacity transitions, Escape-to-close, close button with aria-label, and focus management (trap focus while open and restore focus on close)."
+        },
+        {
+          "path": "frontend/src/content/premiumInteractiveSections.ts",
+          "operation": "modify",
+          "description": "Add English polaroid wall items (caption + optional placeholder metadata) consumed by the Polaroid Love Wall section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "summary": "Integrate the new interactive sections into the existing Home/Our Story/Gallery/Forever storytelling flow using existing section patterns and maintaining premium pacing and responsiveness.",
+      "acceptanceCriteria": [
+        "Each new section is placed into one or more of the existing pages (/, /story, /gallery, /finale) in a way that preserves a smooth narrative progression.",
+        "Section spacing, headers, and transitions match existing sections (consistent use of SectionHeader and Reveal patterns).",
+        "No new top-level routes are required unless necessary; if added, navigation remains premium and fully responsive.",
+        "The site remains mobile-first and touch-optimized after adding the new sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire in a curated subset of the new premium sections (e.g., Love Puzzle + Question–Answer Game) into the Home page flow using existing Reveal + SectionHeader + GlassCard spacing conventions; ensure mobile-first layout."
+        },
+        {
+          "path": "frontend/src/pages/StoryPage.tsx",
+          "operation": "modify",
+          "description": "Wire in narrative-aligned sections (e.g., Flipbook Love Story + Travel Memories + Monthly Memories) into the Our Story page with coherent pacing using existing Reveal/SectionTimeline patterns."
+        },
+        {
+          "path": "frontend/src/pages/GalleryMusicPage.tsx",
+          "operation": "modify",
+          "description": "Add Gallery-aligned sections (e.g., Polaroid Love Wall + Voice Note Messages) without introducing new routes; maintain the existing premium transitions and ensure touch-friendly interaction for wall and audio notes."
+        },
+        {
+          "path": "frontend/src/pages/FinalePage.tsx",
+          "operation": "modify",
+          "description": "Optionally place one reflective premium section (e.g., a final Flipbook recap page or Monthly Memories recap) before/after the existing finale cards to keep narrative closure seamless, using Reveal and consistent spacing."
+        }
+      ]
+    }
+  ]
+}

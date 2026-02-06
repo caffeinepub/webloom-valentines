@@ -1,0 +1,42 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T16:51:47.772Z",
+  "summary": "Diff adds all seven requested premium interactive sections as reusable React components under frontend/src/components/sections, backed by a new curated English-only content module, and integrates them into existing pages (Home/Story/Gallery). Reduced-motion handling is used throughout via usePrefersReducedMotion and motion classes largely rely on opacity/transform transitions. One key accessibility requirement (focus trap for the Polaroid modal) is not evidenced, and voice-note volume/fade integration with the existing music system is not evidenced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-17",
+      "requirement": "Voice Note Messages section should have smooth fade/volume behavior aligned with the existing music system.",
+      "reason": "The diff shows per-note playback created via `new Audio(audioPath)` with play/pause and timeupdate listeners, but no evidence of coordinating volume/fade with the existing BackgroundMusicProvider/music system.",
+      "evidence": [
+        "frontend/src/components/sections/VoiceNoteMessagesSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "requirement": "Polaroid Love Wall expanded view (if modal) traps focus appropriately.",
+      "reason": "The diff evidences a modal-like dialog (role=\"dialog\", aria-modal, Escape-to-close, overlay click-to-close) but does not show any focus-trap implementation (e.g., focus sent into modal, tab cycling, restoring focus on close).",
+      "evidence": [
+        "frontend/src/components/sections/PolaroidLoveWallSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/sections/FlipbookLoveStorySection.tsx",
+    "frontend/src/components/sections/LovePuzzleSection.tsx",
+    "frontend/src/components/sections/MonthlyMemoriesSection.tsx",
+    "frontend/src/components/sections/PolaroidLoveWallSection.tsx",
+    "frontend/src/components/sections/QuestionAnswerGameSection.tsx",
+    "frontend/src/components/sections/TravelMemoriesSection.tsx",
+    "frontend/src/components/sections/VoiceNoteMessagesSection.tsx",
+    "frontend/src/content/premiumInteractiveSections.ts",
+    "frontend/src/index.css",
+    "frontend/src/pages/GalleryMusicPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/StoryPage.tsx",
+    "project_state.json"
+  ]
+}

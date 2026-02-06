@@ -1,0 +1,204 @@
+{
+  "kind": "build_request",
+  "title": "Add immersive interactive love-story sections (puzzle, Q&A, travel, voice notes, flipbook, monthly memories, polaroid wall)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Create a new set of premium interactive storytelling sections—Love Puzzle, Question–Answer Game, Travel Memories, Voice Note Messages, Flipbook Love Story, Monthly Memories, and Polaroid Love Wall—implemented as reusable React components that match the existing Valentine luxury visual system (glassmorphism, soft pastel gradients, subtle glow, film grain) and animation patterns (Reveal/SectionTimeline/ParallaxLayer), with all user-facing text in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Additionally, enhance the overall experience by integrating interactive and emotional premium sections such as Love Puzzle, Question–Answer Game, Travel Memories, Voice Note Messages, Flipbook Love Story, Monthly Memories, and Polaroid Love Wall."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each named section exists as a dedicated, reusable component under the existing frontend component organization (e.g., frontend/src/components/sections/...).",
+        "Each section uses the existing design language (GlassCard/SectionHeader styling conventions, soft pastel gradients, premium shadows) and does not introduce a clashing visual theme.",
+        "Each section includes smooth, cinematic transitions consistent with existing motion primitives (e.g., Reveal, SectionTimeline, ParallaxLayer) and avoids heavy layout thrash (prefer transform/opacity).",
+        "All user-facing labels, prompts, and helper text in these sections are in English."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement the Love Puzzle section as an interactive, playful-yet-elegant mini experience where users can complete a simple puzzle interaction (e.g., rearranging tiles/cards) that reveals a romantic message upon completion, including a clear reset/replay control.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Love Puzzle"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The puzzle interaction is usable on both desktop and mobile (touch-friendly).",
+        "On completion, the section reveals a premium-styled romantic message with a cinematic reveal animation.",
+        "There is an obvious way to reset/replay the puzzle without refreshing the page.",
+        "The section respects reduced-motion preferences (no continuous/complex animations when reduced motion is enabled)."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement the Question–Answer Game section as an interactive Q&A flow with multiple romantic prompts, where selecting an answer triggers an emotionally styled response/transition and optionally unlocks the next prompt, with a gentle progression indicator and replayability.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Question–Answer Game"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Q&A section presents multiple questions with selectable answers in a premium card UI.",
+        "Choosing an answer produces an immediate animated feedback state (e.g., soft glow, reveal of a response, or gentle transition).",
+        "Users can move through the questions and restart the experience.",
+        "The interaction is keyboard accessible for primary controls (focus states visible; Enter/Space activates choices)."
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Implement the Travel Memories section as an interactive memory map/timeline-style gallery (no geolocation) that lets users browse travel moments via a premium timeline/carousel of destinations, each expanding into a detailed memory card with cinematic transitions and optional image placeholders.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Travel Memories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Travel memories are presented as a browsable set of items (timeline, carousel, or stepped cards) with smooth transitions between items.",
+        "Selecting a travel memory expands/reveals details (title, short narrative) in a premium glassmorphic card presentation.",
+        "No GPS, maps, or external geolocation services are used.",
+        "The section remains responsive and touch-optimized (swipe or tap supported if a carousel/stepper is used)."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Implement the Voice Note Messages section as a curated set of playable voice notes (predefined audio sources) with an elegant mini-player UI per note (play/pause, progress, duration), smooth fade/volume behavior aligned with the existing music system, and premium animated reveal when a note is opened.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Voice Note Messages"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The section displays multiple voice-note items (title + short caption) and supports playing audio for a selected note.",
+        "Each voice note has a clear play/pause control and a visible progress indicator.",
+        "Audio playback is stable and does not require recording, uploading, or backend storage.",
+        "The section respects reduced-motion preferences and remains usable on mobile (large tap targets)."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Implement the Flipbook Love Story section as an interactive flipbook-style sequence of story “pages” where users can flip forward/back through short scenes, using cinematic page-turn animations that degrade gracefully under reduced-motion settings.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Flipbook Love Story"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can navigate forward/back through multiple flipbook pages with obvious controls.",
+        "Page transitions feel premium and cinematic; when reduced motion is enabled, transitions become simple fades/slides without jarring effects.",
+        "Each page includes English story text and consistent typography/styling with the rest of the site.",
+        "The flipbook is responsive and works on touch devices (tap zones/buttons)."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Implement the Monthly Memories section as an interactive month-by-month memory selector (e.g., grid of months or a horizontal selector) that reveals a highlight memory card per month with smooth transitions, premium micro-interactions, and an option to browse all months sequentially.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Monthly Memories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A user can select a month and see a corresponding memory card (title + short text) with a reveal animation.",
+        "There is a clear way to move between months (direct selection and/or next/previous).",
+        "The UI remains readable and well-spaced on mobile screens (no cramped month grid).",
+        "Animations use transform/opacity where possible and honor reduced-motion preferences."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Implement the Polaroid Love Wall section as an interactive “wall” of polaroid-style cards (building on the existing PolaroidGallery visual style) where users can tap/click a polaroid to expand it into a focused memory view with cinematic transitions and a clear way to close/return to the wall.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Polaroid Love Wall"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The wall shows multiple polaroid items with playful tilt/hover effects consistent with the existing polaroid aesthetic.",
+        "Selecting a polaroid opens an expanded view (modal or inline expansion) with smooth transitions and an accessible close mechanism.",
+        "The expanded view supports keyboard escape/close (if modal) and traps focus appropriately (if modal).",
+        "The section remains fast and responsive; hover-only affordances have tap alternatives on mobile."
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Integrate the new interactive sections into the existing 3–4 page storytelling flow (Home, Our Story, Gallery, Forever) so that they feel seamless and intentional, using existing section patterns (SectionHeader, GlassCard, Reveal, SectionTimeline) and maintaining coherent narrative pacing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "seamlessly blending into the storytelling flow of the website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each new section is placed into one or more of the existing pages (/, /story, /gallery, /finale) in a way that preserves a smooth narrative progression.",
+        "Section spacing, headers, and transitions match existing sections (consistent use of SectionHeader and Reveal patterns).",
+        "No new top-level routes are required unless necessary; if added, navigation remains premium and fully responsive.",
+        "The site remains mobile-first and touch-optimized after adding the new sections."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files in frontend immutablePaths (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx, and frontend/src/components/ui).",
+    "Keep the backend as a single Motoko actor; do not introduce additional backend services or external databases.",
+    "All user-facing text must be in English.",
+    "Animations and interactions must respect reduced-motion preferences and avoid performance-heavy layout thrashing (prefer transform/opacity)."
+  ],
+  "nonGoals": [
+    "Do not add user accounts, cloud storage, or any backend persistence for memories/answers/voice notes in this change.",
+    "Do not implement real voice-note recording, uploading, or microphone access; voice notes should be curated/predefined audio assets only.",
+    "Do not add GPS, map providers, or geolocation-based travel features.",
+    "Do not introduce real-time features (WebSockets/chat) or third-party auth beyond Internet Identity."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

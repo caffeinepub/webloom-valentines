@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    
+    /* Valentine Luxury Palette - Light Mode */
+    --background: 0.98 0.015 15;
+    --foreground: 0.25 0.02 15;
+    --card: 0.99 0.01 15;
+    --card-foreground: 0.25 0.02 15;
+    --popover: 0.99 0.01 15;
+    --popover-foreground: 0.25 0.02 15;
+    --primary: 0.62 0.22 15;
+    --primary-foreground: 0.99 0.01 15;
+    --secondary: 0.95 0.02 340;
+    --secondary-foreground: 0.25 0.02 15;
+    --muted: 0.96 0.015 15;
+    --muted-foreground: 0.55 0.02 15;
+    --accent: 0.94 0.03 340;
+    --accent-foreground: 0.25 0.02 15;
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 0.99 0.01 15;
+    --border: 0.92 0.015 15;
+    --input: 0.92 0.015 15;
+    --ring: 0.62 0.22 15;
+    
+    /* Custom Valentine Colors */
+    --rose-50: 0.98 0.02 15;
+    --rose-100: 0.96 0.04 15;
+    --rose-200: 0.92 0.08 15;
+    --rose-300: 0.85 0.12 15;
+    --rose-400: 0.72 0.18 15;
+    --rose-500: 0.62 0.22 15;
+    --rose-600: 0.52 0.20 15;
+    
+    --pink-50: 0.98 0.02 340;
+    --pink-100: 0.96 0.04 340;
+    --pink-200: 0.92 0.08 340;
+    --pink-300: 0.85 0.12 340;
+    --pink-400: 0.72 0.18 340;
+    --pink-500: 0.62 0.22 340;
+    
+    --cream-50: 0.98 0.01 60;
+    --champagne: 0.92 0.05 60;
+    --lavender: 0.85 0.08 300;
+  }
+
+  .dark {
+    --background: 0.18 0.02 15;
+    --foreground: 0.98 0.01 15;
+    --card: 0.22 0.02 15;
+    --card-foreground: 0.98 0.01 15;
+    --popover: 0.22 0.02 15;
+    --popover-foreground: 0.98 0.01 15;
+    --primary: 0.72 0.18 15;
+    --primary-foreground: 0.18 0.02 15;
+    --secondary: 0.28 0.03 340;
+    --secondary-foreground: 0.98 0.01 15;
+    --muted: 0.28 0.02 15;
+    --muted-foreground: 0.65 0.02 15;
+    --accent: 0.32 0.04 340;
+    --accent-foreground: 0.98 0.01 15;
+    --destructive: 0.65 0.22 27;
+    --destructive-foreground: 0.98 0.01 15;
+    --border: 0.32 0.02 15;
+    --input: 0.32 0.02 15;
+    --ring: 0.72 0.18 15;
+    
+    /* Dark mode Valentine colors */
+    --rose-50: 0.25 0.02 15;
+    --rose-100: 0.30 0.03 15;
+    --rose-200: 0.38 0.05 15;
+    --rose-300: 0.48 0.08 15;
+    --rose-400: 0.62 0.14 15;
+    --rose-500: 0.72 0.18 15;
+    --rose-600: 0.78 0.20 15;
+    
+    --pink-50: 0.25 0.02 340;
+    --pink-100: 0.30 0.03 340;
+    --pink-200: 0.38 0.05 340;
+    --pink-300: 0.48 0.08 340;
+    --pink-400: 0.62 0.14 340;
+    --pink-500: 0.72 0.18 340;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Hide default cursor when custom cursor is active */
+  @media (pointer: fine) {
+    body:not(.reduced-motion) {
+      cursor: none;
+    }
+    
+    body:not(.reduced-motion) a,
+    body:not(.reduced-motion) button,
+    body:not(.reduced-motion) .cursor-pointer {
+      cursor: none;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    body {
+      cursor: auto !important;
+    }
+  }
+
+  /* Touch device support */
+  @media (pointer: coarse) {
+    body {
+      cursor: auto !important;
+    }
+  }
+
+  /* Custom font for handwriting effect */
+  .font-handwriting {
+    font-family: 'Brush Script MT', cursive;
+  }
+  
+  /* Serif font for story text */
+  .font-serif {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+}
+
+@layer utilities {
+  /* Glass morphism utilities */
+  .glass {
+    @apply backdrop-blur-xl bg-white/40 dark:bg-neutral-900/40 border border-white/20 dark:border-neutral-700/20;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/60 dark:bg-neutral-900/60 border border-white/30 dark:border-neutral-700/30;
+  }
+
+  /* Glow effects */
+  .glow-rose {
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.3);
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Touch-friendly hit targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Prevent horizontal scroll */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Smooth scale utilities */
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
+}
+
+@layer components {
+  /* Custom animations */
+  @keyframes heart-ripple {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+
+  .animate-heart-ripple {
+    animation: heart-ripple 1s ease-out forwards;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Prevent layout shift */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
